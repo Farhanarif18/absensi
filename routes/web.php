@@ -3,6 +3,10 @@
 use Illuminate\Support\Facades\Route;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\HomeController;
+
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -36,3 +40,9 @@ Route::get('/home', function () {
 Route::get('/user/home', function () {
     return view('user/home');
 })->name('home');
+
+Route::get('/', [LoginController::class, 'login'])->name('login');
+Route::post('actionlogin', [LoginController::class, 'actionlogin'])->name('actionlogin');
+
+Route::get('home', [HomeController::class, 'index'])->name('home')->middleware('auth');
+Route::get('actionlogout', [LoginController::class, 'actionlogout'])->name('actionlogout')->middleware('auth');
