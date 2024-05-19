@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Absensi Pegawai</title>
+    <title>Ablepro v8.0 bootstrap admin template by Phoenixcoded</title>
     <!-- HTML5 Shim and Respond.js IE11 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 11]>
@@ -17,10 +17,10 @@
     <meta name="keywords" content="">
     <meta name="author" content="Phoenixcoded" />
     <!-- Favicon icon -->
-    <link rel="icon" href="{{ asset('assets/images/favicon.ico') }}" type="image/x-icon">
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
 
     <!-- vendor css -->
-    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+    <link rel="stylesheet" href="assets/css/style.css">
     
     
 
@@ -208,12 +208,12 @@
                 <div class="row align-items-center">
                     <div class="col-md-12">
                         <div class="page-header-title">
-                            <h5 class="m-b-10">Selamat Memulai aktifitas dengan semangat</h5>
+                            <h5 class="m-b-10">Bootstrap Basic Tables</h5>
                         </div>
                         <ul class="breadcrumb">
                             <li class="breadcrumb-item"><a href="index.html"><i class="feather icon-home"></i></a></li>
                             <li class="breadcrumb-item"><a href="#!">Dashboard</a></li>
-                            <li class="breadcrumb-item"><a href="#!">pegawai</a></li>
+                            <li class="breadcrumb-item"><a href="#!">Cuti</a></li>
                         </ul>
                     </div>
                 </div>
@@ -235,8 +235,8 @@
                                 <thead>
                                     <tr>
                                         <th>#</th>
-                                        <th>Nama Pegawai</th>
-                                        <th></th>
+                                        <th>First Name</th>
+                                        <th>Last Name</th>
                                         <th>Username</th>
                                     </tr>
                                 </thead>
@@ -268,10 +268,10 @@
             
 
     <!-- Required Js -->
-    <script src="{{ asset('assets/js/vendor-all.min.js') }}"></script>
-    <script src="{{ asset('assets/js/plugins/bootstrap.min.js') }}"></script>
-    <script src="{{ asset('assets/js/ripple.js') }}"></script>
-    <script src="{{ asset('assets/js/pcoded.min.js') }}"></script>
+    <script src="assets/js/vendor-all.min.js"></script>
+    <script src="assets/js/plugins/bootstrap.min.js"></script>
+    <script src="assets/js/ripple.js"></script>
+    <script src="assets/js/pcoded.min.js"></script>
 
 
 

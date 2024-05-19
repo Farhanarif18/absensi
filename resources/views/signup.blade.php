@@ -54,7 +54,7 @@
 							<label class="custom-control-label" for="customCheck1">Send me the <a href="#!"> Newsletter</a> weekly.</label>
 						</div>
 						<button class="btn btn-primary btn-block mb-4">Signup</button>
-						<p class="mb-2">Already have an account? <a href="index" class="f-w-400">Signin</a></p>
+						<p class="mb-2">Already have an account? <a href="login" class="f-w-400">Signin</a></p>
 					</div>
 				</div>
 			</div>

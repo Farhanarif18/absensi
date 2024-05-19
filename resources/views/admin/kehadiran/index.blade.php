@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Absensi Pegawai</title>
+    <title>Ablepro v8.0 bootstrap admin template by Phoenixcoded</title>
     <!-- HTML5 Shim and Respond.js IE11 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 11]>
@@ -208,12 +208,12 @@
                 <div class="row align-items-center">
                     <div class="col-md-12">
                         <div class="page-header-title">
-                            <h5 class="m-b-10">Selamat Memulai aktifitas dengan semangat</h5>
+                            <h5 class="m-b-10"></h5>
                         </div>
                         <ul class="breadcrumb">
                             <li class="breadcrumb-item"><a href="index.html"><i class="feather icon-home"></i></a></li>
                             <li class="breadcrumb-item"><a href="#!">Dashboard</a></li>
-                            <li class="breadcrumb-item"><a href="#!">pegawai</a></li>
+                            <li class="breadcrumb-item"><a href="#!">Kehadiran</a></li>
                         </ul>
                     </div>
                 </div>
@@ -236,28 +236,30 @@
                                     <tr>
                                         <th>#</th>
                                         <th>Nama Pegawai</th>
-                                        <th></th>
-                                        <th>Username</th>
+                                        <th>jam Masuk</th>
+                                        <th>jam Keluar</th>
+										<th>izin</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>1</td>
-                                        <td>Mark</td>
-                                        <td>Otto</td>
-                                        <td>@mdo</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+										<td></td>
                                     </tr>
                                     <tr>
-                                        <td>2</td>
-                                        <td>Jacob</td>
-                                        <td>Thornton</td>
-                                        <td>@fat</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
                                     </tr>
                                     <tr>
-                                        <td>3</td>
-                                        <td>Larry</td>
-                                        <td>the Bird</td>
-                                        <td>@twitter</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
                                     </tr>
                                 </tbody>
                             </table>

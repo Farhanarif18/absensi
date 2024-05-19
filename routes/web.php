@@ -3,16 +3,14 @@
 use Illuminate\Support\Facades\Route;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
-use App\Http\Controllers\LoginController;
-use App\Http\Controllers\HomeController;
-
-
+//route resource
+Route::resource('/posts', \App\Http\Controllers\PostController::class);
 
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/index', function () {
-    return view('index');
+Route::get('/login', function () {
+    return view('login');
 });
 
 Route::get('/signup', function () {
@@ -41,8 +39,10 @@ Route::get('/user/home', function () {
     return view('user/home');
 })->name('home');
 
-Route::get('/', [LoginController::class, 'login'])->name('login');
-Route::post('actionlogin', [LoginController::class, 'actionlogin'])->name('actionlogin');
+Route::get('/index', function () {
+    return view('admin.pegawai.index');
+})->name('pegawai');
 
-Route::get('home', [HomeController::class, 'index'])->name('home')->middleware('auth');
-Route::get('actionlogout', [LoginController::class, 'actionlogout'])->name('actionlogout')->middleware('auth');
+Route::get('/index', function () {
+    return view('admin.kehadiran.index');
+})->name('kehadiran');

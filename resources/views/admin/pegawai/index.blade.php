@@ -236,8 +236,11 @@
                                     <tr>
                                         <th>#</th>
                                         <th>Nama Pegawai</th>
-                                        <th></th>
+                                        <th>Email</th>
+                                        <th>Alamat</th>
+                                        <th>No.hp</th>
                                         <th>Username</th>
+                                        <th>aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody>
