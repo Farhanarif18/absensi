@@ -17,10 +17,10 @@
     <meta name="keywords" content="">
     <meta name="author" content="Phoenixcoded" />
     <!-- Favicon icon -->
-    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="{{ asset('images/favicon.ico') }}" type="image/x-icon">
 
     <!-- vendor css -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
     
     
 
@@ -215,6 +215,7 @@
                 </div>
             </div>
         </div>
+			<div class="row btn-page">
         
 			<!-- [ disabled-button ] end -->
 			<!-- [ size-button ] start -->
@@ -224,11 +225,9 @@
 						<h5>ABSEN MASUK/PULANG</h5>
 					</div>
 					<div class="card-body">
-					<div class="card-body">
 						
 						<button type="button" class="btn  btn-primary btn-lg">Absen Masuk</button>
 						<button type="button" class="btn  btn-success btn-lg">Absen Pulang</button>
-					</div>
 					</div>
 				</div>
 			</div>
@@ -238,11 +237,9 @@
 						<h5>TIDAK HADIR</h5>
 					</div>
 					<div class="card-body">
-					<div class="card-body">
 						
 						<button type="button" class="btn  btn-warning btn-lg">Sakit</button>
 						<button type="button" class="btn  btn-info btn-lg">izin</button>
-					</div>
 					</div>
 				</div>
 			</div>
@@ -252,21 +249,24 @@
 						<h5>CUTI</h5>
 					</div>
 					<div class="card-body">
-					<div class="card-body">
 						
 						<button type="button" class="btn  btn-danger btn-lg">Ajukan Cuti</button>
 					</div>
-					</div>
 				</div>
 			</div>
+	</div>
+</div>
+</div>
 
             			
 
     <!-- Required Js -->
-    <script src="assets/js/vendor-all.min.js"></script>
-    <script src="assets/js/plugins/bootstrap.min.js"></script>
-    <script src="assets/js/ripple.js"></script>
-    <script src="assets/js/pcoded.min.js"></script>
+    
+<script src="{{ asset('assets/js/vendor-all.min.js') }}"></script>
+<script src="{{ asset('assets/js/plugins/bootstrap.min.js') }}"></script>
+<script src="{{ asset('assets/js/ripple.js') }}"></script>
+<script src="{{ asset('assets/js/pcoded.min.js') }}"></script>
+    
 
 
 			

@@ -224,17 +224,15 @@
 
 			<!-- [ disabled-button ] end -->
 			<!-- [ size-button ] start -->
-			<div class="col-md-5">
+			<div class="col-md-4">
 				<div class="card">
 					<div class="card-header">
 						<h5>ABSEN MASUK/PULANG</h5>
 					</div>
 					<div class="card-body">
-					<div class="card-body">
 						
 						<button type="button" class="btn  btn-primary btn-lg">Absen Masuk</button>
 						<button type="button" class="btn  btn-success btn-lg">Absen Pulang</button>
-					</div>
 					</div>
 				</div>
 			</div>
@@ -244,27 +242,26 @@
 						<h5>TIDAK HADIR</h5>
 					</div>
 					<div class="card-body">
-					<div class="card-body">
 						
 						<button type="button" class="btn  btn-warning btn-lg">Sakit</button>
 						<button type="button" class="btn  btn-info btn-lg">izin</button>
 					</div>
-					</div>
 				</div>
 			</div>
-			<div class="col-md-3">
+			<div class="col-md-4">
 				<div class="card">
 					<div class="card-header">
 						<h5>CUTI</h5>
 					</div>
 					<div class="card-body">
-					<div class="card-body">
 						
 						<button type="button" class="btn  btn-danger btn-lg">Ajukan Cuti</button>
 					</div>
-					</div>
 				</div>
 			</div>
+		</div>
+	</div>
+</div>
 			
 			
 
