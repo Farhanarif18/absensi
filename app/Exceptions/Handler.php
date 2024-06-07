@@ -4,6 +4,8 @@ namespace App\Exceptions;
 
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Throwable;
+//public function report(Exception$exception);
+
 
 class Handler extends ExceptionHandler
 {

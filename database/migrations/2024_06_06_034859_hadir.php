@@ -11,22 +11,22 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('pegawais', function (Blueprint $table) {
+        Schema::create('hadirs', function (Blueprint $table) {
             $table->id();
-            $table->string('nama');
-            $table->string('email');
-            $table->string('alamat');
-            $table->integer('no_hp');
-            $table->string('username');
+            $table->bigInteger('id_user');
+            $table->time('jam_datang');
+            $table->time('jam_pulang')->nullable();
+            $table->string('insentive');
             $table->timestamps();
         });
     }
+
 
     /**
      * Reverse the migrations.
      */
     public function down(): void
     {
-        Schema::dropIfExists('pegawais');
+        //
     }
 };

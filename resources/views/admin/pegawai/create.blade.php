@@ -11,7 +11,7 @@
                     <div class="col-md-12">
                         <div class="page-header-title">
                             <h5 class="m-b-10">Form Elements</h5>
-                        </div>
+                       </div>
                         <ul class="breadcrumb">
                             <li class="breadcrumb-item"><a href="index.html"><i class="feather icon-home"></i></a></li>
                             <li class="breadcrumb-item"><a href="#!">Form Components</a></li>
@@ -63,8 +63,13 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="username">Username</label>
-                                        <input type="integer" class="form-control" id="username" aria-describedby="emailHelp" placeholder="masukkan No. Telpon" required="required" name="username">
-                                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                                        <input type="text" class="form-control" id="username" aria-describedby="emailHelp" placeholder="masukkan Username" required="required" name="username">
+                                        <small id="username" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="password">Password</label>
+                                        <input type="password" class="form-control" id="password" aria-describedby="emailHelp" placeholder="masukkan Password" required="required" name="password">
+                                        <small id="password" class="form-text text-muted">We'll never share your email with anyone else.</small>
                                     </div>
                                     <div class="form-group form-check">
                                         <input type="checkbox" class="form-check-input" id="exampleCheck1">

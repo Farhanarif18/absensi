@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Ablepro v8.0 bootstrap admin template by Phoenixcoded</title>
+    <title>Absen Pegawai</title>
     <!-- HTML5 Shim and Respond.js IE11 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 11]>
@@ -222,12 +222,16 @@
 			<div class="col-md-5">
 				<div class="card">
 					<div class="card-header">
-						<h5>ABSEN MASUK/PULANG</h5>
+						<h5>ABSEN MASUK & PULANG</h5>
 					</div>
 					<div class="card-body">
+						<form action="{{ route('absen') }}" method="POST">
+							@csrf
+							<button type="submit"  class="btn  btn-primary btn-lg">Absen Masuk</button>
+							<button type="button" class="btn  btn-success btn-lg">Absen Pulang</button>
 						
-						<button type="button" class="btn  btn-primary btn-lg">Absen Masuk</button>
-						<button type="button" class="btn  btn-success btn-lg">Absen Pulang</button>
+						</form>
+						
 					</div>
 				</div>
 			</div>
@@ -238,8 +242,8 @@
 					</div>
 					<div class="card-body">
 						
-						<button type="button" class="btn  btn-warning btn-lg">Sakit</button>
-						<button type="button" class="btn  btn-info btn-lg">izin</button>
+						<a href="{{ route('tidakmasuk') }}"><button class="btn btn-primary">Tidak Masuk</button></a>
+						
 					</div>
 				</div>
 			</div>

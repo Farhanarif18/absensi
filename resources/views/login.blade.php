@@ -1,73 +1,93 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layout')
+@section('content')
 
-<head>
+<div id="layoutAuthentication">
+    <div id="layoutAuthentication_content">
+        <main>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-5">
+                        <div class="card shadow-lg border-0 rounded-lg mt-5">
+                            {{-- Error Alert --}}
+                            @if(session('error'))
+                            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                {{session('error')}}
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            @endif
+                            <div class="card-header">
+                                <div class="text-center">
+                                    <img src="{{ asset('image/library.png')}}" class="img-responsive img-body">
+                                </div>
+                               
+                                <h3 class="text-center font-weight-light my-4">Login</h3>
+                            </div>
+                            <div class="card-body">
+                                <form action="{{url('login')}}" method="POST" id="logForm">
+                                    {{ csrf_field() }}
+                                    <div class="form-group">
+                                        @error('login_gagal')
+                                            {{-- <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span> --}}
+                                            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                                {{-- <span class="alert-inner--icon"><i class="ni ni-like-2"></i></span> --}}
+                                                <span class="alert-inner--text"><strong>Warning!</strong>  {{ $message }}</span>
+                                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            @enderror
+                                        <label class="small mb-1" for="inputEmailAddress">Username</label>
+                                        <input
+                                            class="form-control py-4"
+                                            id="inputEmailAddress"
+                                            name="username"
+                                            type="text"
+                                            placeholder="Masukkan Username"/>
+                                        @if($errors->has('username'))
+                                        <span class="error">{{ $errors->first('username') }}</span>
+                                        @endif
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="small mb-1" for="inputPassword">Password</label>
+                                        <input
+                                            class="form-control py-4"
+                                            id="inputPassword"
+                                            type="password"
+                                            name="password"
+                                            placeholder="Masukkan Password"/>
+                                        @if($errors->has('password'))
+                                        <span class="error">{{ $errors->first('password') }}</span>
+                                        @endif
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="custom-control custom-checkbox">
+                                            <input class="custom-control-input" id="rememberPasswordCheck" type="checkbox"/>
+                                            <label class="custom-control-label" for="rememberPasswordCheck">Remember password</label>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="form-group d-flex align-items-center justify-content-between mt-4 mb-0">
+                                        {{-- <a class="small" href="#">Forgot Password?</a> --}}
+                                            <button  class="btn w-100 btn-primary btn-block btn-login" type="submit">Login</button>
+                                       
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="card-footer text-center">
+                                <div class="small">
+                                    {{-- <a href="{{route('register')}}">Belum Punya Akun? Daftar!</a> --}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
 
-	<title>Absensi Karyawan</title>
-	<!-- HTML5 Shim and Respond.js IE11 support of HTML5 elements and media queries -->
-	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-	<!--[if lt IE 11]>
-		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-		<![endif]-->
-	<!-- Meta -->
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta name="description" content="" />
-	<meta name="keywords" content="">
-	<meta name="author" content="Phoenixcoded" />
-	<!-- Favicon icon -->
-	<link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
-
-	<!-- vendor css -->
-	<link rel="stylesheet" href="assets/css/style.css">
-	
-	
-
-
-</head>
-
-<!-- [ auth-signin ] start -->
-<div class="auth-wrapper">
-	<div class="auth-content">
-		<div class="card">
-			<div class="row align-items-center text-center">
-				<div class="col-md-12">
-					<div class="card-body">
-						<img src="assets/images/logo-dark.png" alt="" class="img-fluid mb-4">
-						<h4 class="mb-3 f-w-400">Signin</h4>
-						<div class="form-group mb-3">
-							<label class="floating-label" for="Email">Username</label>
-							<input type="text" class="form-control" id="Email" placeholder="">
-						</div>
-						<div class="form-group mb-4">
-							<label class="floating-label" for="Password">Password</label>
-							<input type="password" class="form-control" id="Password" placeholder="">
-						</div>
-						<div class="custom-control custom-checkbox text-left mb-4 mt-2">
-							<input type="checkbox" class="custom-control-input" id="customCheck1">
-							<label class="custom-control-label" for="customCheck1">Save credentials.</label>
-						</div>
-						<button class="btn btn-block btn-primary mb-4" >Login</button>
-						<p class="mb-2 text-muted">Forgot password? <a href="auth-reset-password.html" class="f-w-400">Reset</a></p>
-						<p class="mb-0 text-muted">Don’t have an account? <a href="signup" class="f-w-400">Signup</a></p>
-					</div>
-				</div>				
-			</div>
-		</div>
-	</div>
 </div>
-<!-- [ auth-signin ] end -->
-
-<!-- Required Js -->
-<script src="assets/js/vendor-all.min.js"></script>
-<script src="assets/js/plugins/bootstrap.min.js"></script>
-<script src="assets/js/ripple.js"></script>
-<script src="assets/js/pcoded.min.js"></script>
-
-
-
-</body>
-
-</html>
+@endsection

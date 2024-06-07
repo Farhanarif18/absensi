@@ -13,9 +13,10 @@ return new class extends Migration
     {
         Schema::create('kehadirans', function (Blueprint $table) {
             $table->id();
-            $table->string('nama');
+            $table->bigInteger('id_user');
             $table->time('jam_datang');
-            $table->time('jam_pulang');
+            $table->time('jam_pulang')->nullable();
+            $table->string('insentive');
             $table->timestamps();
         });
     }

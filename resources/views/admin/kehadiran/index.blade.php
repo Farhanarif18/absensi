@@ -28,42 +28,33 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
-                        <h5>Basic Table</h5>
-                        <span class="d-block m-t-5">use class <code>table</code> inside table element</span>
+                        <h5>KEHADIRAN</h5>
+                        <span class="d-block m-t-5"> </span>
                     </div>
                     <div class="card-body table-border-style">
                         <div class="table-responsive">
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th>#</th>
+                                        <th>No</th>
                                         <th>Nama Pegawai</th>
                                         <th>jam Masuk</th>
                                         <th>jam Keluar</th>
-										<th>izin</th>
+										<th>insentive</th>
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    @foreach($pegawai as $p)
                                     <tr>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
+                                        <td>{{ $no++ }}</td>
+                                        <td>{{ $p->user[0]->name }}</td>
+                                        <td>{{ $p->jam_datang }}</td>
+                                        <td>{{ $p->jam_pulang }}</td>
+                                        <td>{{ $p->insentive }}</td>
 										<td></td>
                                     </tr>
-                                    <tr>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
                                 </tbody>
+                                @endforeach
                             </table>
                         </div>
                     </div>
@@ -78,5 +69,4 @@
 
 
 
-  
-    
+

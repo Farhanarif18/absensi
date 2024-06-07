@@ -32,7 +32,7 @@
 					<a href="{{ route('kehadiran') }}" class="nav-link "><span class="pcoded-micon"><i class="feather icon-home"></i></span><span class="pcoded-mtext">kehadiran</span></a>
 				</li>
 				<li class="nav-item">
-					<a href="{{ route('cuti') }}" class="nav-link "><span class="pcoded-micon"><i class="feather icon-home"></i></span><span class="pcoded-mtext">cuti</span></a>
+					<a href="{{ route('cuti') }}" class="nav-link "><span class="pcoded-micon"><i class="feather icon-home"></i></span><span class="pcoded-mtext">Tidak  Hadir</span></a>
 				</li>
 				
 				<li class="nav-item pcoded-menu-caption">

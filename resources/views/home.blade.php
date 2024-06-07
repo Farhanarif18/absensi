@@ -231,7 +231,7 @@
 					</div>
 					<div class="card-body">
 						
-						<button type="button" class="btn  btn-primary btn-lg">Absen Masuk</button>
+						<a href=""  class="btn  btn-primary btn-lg">Absen Masuk</a>
 						<button type="button" class="btn  btn-success btn-lg">Absen Pulang</button>
 					</div>
 				</div>

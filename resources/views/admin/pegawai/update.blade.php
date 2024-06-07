@@ -66,6 +66,11 @@
                                         <input type="integer" class="form-control" id="username" aria-describedby="emailHelp" placeholder="masukkan username" required="required" name="username" value="{{ $p ->username }}">
                                         <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                                     </div>
+                                    <div class="form-group">
+                                        <label for="password">Password</label>
+                                        <input type="password" class="form-control" id="password" aria-describedby="emailHelp" placeholder="masukkan Password" required="required" name="password">
+                                        <small id="password" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                                    </div>
                                     <div class="form-group form-check">
                                         <input type="checkbox" class="form-check-input" id="exampleCheck1">
                                         <label class="form-check-label" for="exampleCheck1">Check me out</label>
