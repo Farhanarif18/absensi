@@ -9,7 +9,7 @@ class Hadir extends Model
 {
     use HasFactory;
 
-    protected $table = 'hadir';
+    protected $table = 'hadirs';
 
     protected $fillable = [
         'jam_datang',
@@ -22,6 +22,4 @@ class Hadir extends Model
         return $this->hasMany(User::class,'id','id_user');
     
     }
-
-
 }

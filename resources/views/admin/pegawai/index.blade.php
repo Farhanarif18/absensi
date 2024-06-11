@@ -58,17 +58,18 @@
                                         <td>{{ $p->username}}</td>
 
                                         <td>
-                                            <a href="/pegawai/edit/{{ $p->id }}"><button class="btn  btn-outline-primary">update</button></a>
-                                            {{-- <a href="{{ Route('/pegawai/edit') }}"><button type="button" class="btn btn-primary">update</button></a> --}}
-                                            <a href="/pegawai/hapus/{{ $p->id }}"><button class="btn  btn-outline-primary">Delete</button></a>
-                                            {{-- <form action="{{ route('pegawai.hapus', $p->id) }}" method="POST" class="d-inline">
-                                                @csrf
-                                                @method('delete')
-                                                <button class="btn btn-danger">
-                                                    <i class="fa fa-trash"></i>
-                                                </button>
-                                            </form> --}}
+                                            <a href="/pegawai/edit/{{ $p->id }}"><button class="btn  btn-outline-primary">Update</button></a>
+                                            <a href="/delete/{{ $p->id }}"><button class="btn  btn-outline-primary">Delete</button></a>
+                                            <!-- <a href="/pegawai/hapus/{{ $p->id }}"><button class="btn  btn-outline-primary">Delete</button></a>
+                                            {{-- <a href="{{ route('destroy', $p->id) }}"><button type="button" class="btn btn-primary">Delete</button></a> --}} -->
                                         </td>
+                                        <!-- <td>
+                                            <form action="{{ route('destroy', $p->id) }}" method="POST">
+                                                @csrf
+                                                @method('DELETE')
+                                                <button type="submit" class="btn btn-primary">Delete</button>
+                                            </form>
+                                        </td> -->
                                     </tr>
                                 </tbody>
                                 @endforeach

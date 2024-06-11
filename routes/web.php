@@ -16,9 +16,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', function () {
-    return view('admin.dashboard1');
-})->name('dashboard');
+Route::get('/dashboard','App\Http\Controllers\AdminController@index' )->name('dashboard');
 
 Route::get('/user/home', function () {
     return view('user/index');
@@ -68,10 +66,12 @@ Route::post('/pegawai/update', 'App\Http\Controllers\PegawaiController@update')
 
 Route::post('/absen', 'App\Http\Controllers\UserController@absen')->name('absen');
 
+Route::post('/absen/pulang', 'App\Http\Controllers\UserController@absenPulang')->name('absenPulang');
+
 // Route::delete('/pegawai/hapus/{id}','App\Http\Controllers\PegawaiController@destroy')
 // -> name ('hapus'); 
 
-Route::delete('/delete{id}', 'PegawaiController@destroy')->name('destroy.user');
+Route::get('/delete/{id}', 'App\Http\Controllers\PegawaiController@destroy')->name('destroy');
 
 Route::get('/kehadiran', 'App\Http\Controllers\PegawaiController@hadir')
     ->name('kehadiran');
@@ -82,8 +82,15 @@ Route::get('/pegawai/tidakmasuk', 'App\Http\Controllers\PegawaiController@tdmasu
 Route::post('/pegawai/tidakmasuk', 'App\Http\Controllers\PegawaiController@tidakmasuk')
     ->name('tidakmasuk');
 
-Route::get('/thadir', 'App\Http\Controllers\PegawaiController@thadir')
-    ->name('thadir');
+Route::get('/pegawai/cuti', 'App\Http\Controllers\PegawaiController@cuti')
+    ->name('cuti');
+
+Route::post('/pegawai/cuti', 'App\Http\Controllers\PegawaiController@prosesCuti')
+    ->name('prosesCuti');
+
+Route::get('/thadir', [PegawaiController::class, 'thadir'])->name('thadir');
+
+Route::get('/cuti', [PegawaiController::class, 'dataCuti'])->name('dataCuti');
 
 
 // Route::get('/pegawai', [PegawaiController::class, 'index']);

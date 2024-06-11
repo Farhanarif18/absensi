@@ -39,7 +39,7 @@
                                         <th>No</th>
                                         <th>Nama</th>
                                         <th>Alasan</th>
-                                        <th>Jumlah</th>
+                                        <th>Tanggal</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -49,7 +49,7 @@
                                                 <td>{{ $no++ }}</td>
                                                 <td>{{ $p->name }}</td>
                                                 <td>{{ $p->alasan }}</td>
-                                                <td>{{ $p->jumlah }}</td>
+                                                <td>{{ $p->tanggal }}</td>
                                             </tr> 
                                         @endforeach 
                                 </tbody>

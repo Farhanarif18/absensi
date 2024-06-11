@@ -225,13 +225,16 @@
 						<h5>ABSEN MASUK & PULANG</h5>
 					</div>
 					<div class="card-body">
-						<form action="{{ route('absen') }}" method="POST">
-							@csrf
-							<button type="submit"  class="btn  btn-primary btn-lg">Absen Masuk</button>
-							<button type="button" class="btn  btn-success btn-lg">Absen Pulang</button>
-						
-						</form>
-						
+						<div class="row">
+							<form action="{{ route('absen') }}" method="POST">
+								@csrf
+								<button type="submit" class="btn  btn-primary btn-lg">Absen Masuk</button>
+							</form>
+							<form action="{{ route('absenPulang') }}" method="POST">
+								@csrf
+								<button type="submit" class="btn  btn-success btn-lg">Absen Pulang</button>
+							</form>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -254,7 +257,7 @@
 					</div>
 					<div class="card-body">
 						
-						<button type="button" class="btn  btn-danger btn-lg">Ajukan Cuti</button>
+						<a href="{{route('cuti')}}" class="btn  btn-danger btn-lg">Ajukan Cuti</a>
 					</div>
 				</div>
 			</div>

@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('email')->unique()->nullable();
             $table->string('alamat');
             $table->integer('no_hp')->unique()->nullable();
-            $table->string('password');
+            $table->string('password')->hash;
             $table->string('level');
             $table->rememberToken();
             $table->timestamps();

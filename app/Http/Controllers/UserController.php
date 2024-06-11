@@ -7,7 +7,6 @@ use App\Models\Hadir;
 use App\Models\Kehadiran;
 use App\Models\Pegawai;
 use App\Models\User;
-use App\Models\Cuti;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 
@@ -38,10 +37,14 @@ class UserController extends Controller
         
         
         return redirect()->intended('/user/home');
+    }    
+
+    public function absenPulang(Request $request){
+        $id_user = $request->session()->get('id');
+        Hadir::where('id_user', $id_user)
+            ->update(['jam_pulang' => Carbon::now()->format('H:i')]);
+        return redirect()->intended('/user/home');
     }
-
     
-
-
 }
 

@@ -5,14 +5,20 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class cuti extends Model
+class absen extends Model
 {
     use HasFactory;
-    protected $table = 'cutis';
+
+    protected $table = 'absens';
 
     protected $fillable = [
         'id_user',
         'alasan',
-        'jumlah',        
+        'tanggal',        
     ];
+    public function cuti(){
+        
+        return $this->belongsTo(User::class, 'id_user');
+    
+    }
 }

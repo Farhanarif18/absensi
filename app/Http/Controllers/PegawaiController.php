@@ -9,8 +9,9 @@ use Illuminate\Support\Facades\DB;
 use App\Models\Pegawai;
 use App\Models\User as ModelsUser;
 use App\Models\User;
+use App\Models\absen;
+use App\Models\cuti;
 use Workbench\App\Models\User as AppModelsUser;
-use App\Models\Cuti;
 use App\Models\Kehadiran;
 use Illuminate\Database\Eloquent\Model;
 use Carbon\Carbon;
@@ -48,7 +49,7 @@ class PegawaiController extends Controller
             'alamat' => $request->alamat,
             'no_hp' => $request->no_hp,
             'username' => $request->username,
-            'password' => $request->password,
+            'password' => bcrypt($request->password),
             'level' => 'user'
         ]);
         return redirect('/pegawai');
@@ -88,10 +89,10 @@ class PegawaiController extends Controller
     public function destroy($id)
     {
         // menghapus data pegawai berdasarkan id yang dipilih
-        DB::table('user')->where('idi', $id)->delete();
+        DB::table('users')->where('id', $id)->delete();
 
         // alihkan halaman ke halaman pegawai
-        return redirect('/pegawai');
+        return redirect()->route('pegawai');
     }
 
     public function hadir()
@@ -109,7 +110,7 @@ class PegawaiController extends Controller
     }
     public function tidakmasuk(Request $request)
     {
-        Cuti::create([
+        absen::create([
             'id_user' => $request->session()->get('id'),
             'alasan' => $request->alasan,
             'tanggal' => now()
@@ -117,11 +118,37 @@ class PegawaiController extends Controller
         return redirect()->intended('/user/home');
     }
 
-
-    public function thadir()
-    {
-        $data = Cuti::with('cuti')->get(); // Mengambil data Cuti dengan relasi user
+    public function thadir(Request $request)
+    {   
         $no = 1;
-        return view('admin.cuti.index', compact('data', 'no'));
+        $id_user = $request->session()->get('id');
+        $data = User::join('absens','users.id','=','absens.id_user')
+            ->select('users.name','absens.alasan','absens.tanggal')
+            ->get();
+        return view('admin.absen.index', compact('data','no'));
+    }
+
+    public function cuti()
+    {   
+        return view('user.cuti');
+    }
+
+    public function prosesCuti(Request $request)
+    {   
+        $id_user = $request->session()->get('id');
+        $data = $request->all();
+        $data['id_user'] = $id_user;
+        cuti::create($data);
+        return redirect()->route('home');
+    }
+
+    public function dataCuti(Request $request)
+    {   
+        $no = 1;
+        $id_user = $request->session()->get('id');
+        $data = User::join('cutis','users.id','=','cutis.id_user')
+            ->select('users.name','cutis.alasan','cutis.jumlah')
+            ->get();
+        return view('admin.cuti.index', compact('data','no'));
     }
 }

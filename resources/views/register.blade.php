@@ -33,6 +33,20 @@
                                         @endif
                                     </div>
                                     <div class="form-group">
+                                        <label class="small mb-1" for="inputusername">Alamat</label>
+                                        <input class="form-control py-4" id="inputusername" type="text" name="alamat" placeholder="Masukkan username" />
+                                         @if ($errors->has('alamat'))
+                                          <span class="error"> * {{ $errors->first('username') }}</span>
+                                          @endif
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="small mb-1" for="inputusername">No Handphone</label>
+                                        <input class="form-control py-4" id="inputusername" type="text" name="no_hp" placeholder="Masukkan username" />
+                                         @if ($errors->has('no_hp'))
+                                          <span class="error"> * {{ $errors->first('username') }}</span>
+                                          @endif
+                                    </div>
+                                    <div class="form-group">
                                         <label class="small mb-1" for="inputPassword">Password</label>
                                         <input class="form-control py-4" id="inputPassword" type="password" name="password" placeholder="Masukkan Password" />
                                         @if ($errors->has('password'))
@@ -40,7 +54,7 @@
                                         @endif
                                     </div>
                                     <div class="form-group mt-4 mb-0">
-                                        <button class="btn btn-primary btn-block" type="submit">Daftar!</button>
+                                        <button  class="btn w-100 btn-primary btn-block btn-login" type="submit">Daftar</button>
                                     </div>
                                 </form>
                             </div>
