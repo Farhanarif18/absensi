@@ -30,6 +30,9 @@
                     <div class="card-header">
                         <h5>Basic Table</h5>
                         <span class="d-block m-t-5">use class <code>table</code> inside table element</span>
+                            <form action="{{ route('export.cuti') }}">
+                                <button type="submit" class="btn btn-primary">Export Cuti</button>
+                            </form>
                     </div>
                     <div class="card-body table-border-style">
                         <div class="table-responsive">

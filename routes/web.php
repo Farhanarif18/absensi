@@ -7,8 +7,6 @@ use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
-use App\Models\User;
-
 //route resource
 Route::resource('/posts', \App\Http\Controllers\PostController::class);
 
@@ -48,6 +46,9 @@ Route::get('/kehadiran', function () {
 // })->name('pegawai');
 Route::get('/cuti', 'App\Http\Controllers\PegawaiController@thadir')
     ->name('cuti');
+
+    Route::get('/rekap', 'App\Http\Controllers\PegawaiController@rekap')
+    ->name('rekap');
 
 Route::get('/pegawai', 'App\Http\Controllers\PegawaiController@index')
     ->name('pegawai');
@@ -118,3 +119,11 @@ Route::group(['middleware' => ['guest']], function () {
     //     Route::resource('user', UserController::class);
     // });
 });
+
+
+//import export
+Route::get('/export/cuti', 'App\Http\Controllers\ExcelExportController@cuti')->name('export.cuti');
+Route::get('/export/user', 'App\Http\Controllers\ExcelExportController@user')->name('export.user');
+Route::get('/export/hadir', 'App\Http\Controllers\ExcelExportController@hadir')->name('export.hadir');
+Route::get('/export/absen', 'App\Http\Controllers\ExcelExportController@absen')->name('export.absen');
+Route::post('/import', 'App\Http\Controllers\ExcelImportController@import');

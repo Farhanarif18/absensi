@@ -10,12 +10,12 @@
                 <div class="row align-items-center">
                     <div class="col-md-12">
                         <div class="page-header-title">
-                            <h5 class="m-b-10">Bootstrap Basic Tables</h5>
+                            <h5 class="m-b-10"></h5>
                         </div>
                         <ul class="breadcrumb">
                             <li class="breadcrumb-item"><a href="index.html"><i class="feather icon-home"></i></a></li>
                             <li class="breadcrumb-item"><a href="#!">Dashboard</a></li>
-                            <li class="breadcrumb-item"><a href="#!">Cuti</a></li>
+                            <li class="breadcrumb-item"><a href="#!">Tidak  Hadir</a></li>
                         </ul>
                     </div>
                 </div>
@@ -28,10 +28,12 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
-                        <h5>Basic Table</h5>
-                        <span class="d-block m-t-5">use class <code>table</code> inside table element</span>
+                        <h5>TIDAK HADIR</h5>
                     </div>
                     <div class="card-body table-border-style">
+                        <form action="{{ route('export.absen') }}">
+                            <button type="submit" class="btn btn-primary">Export Tidak  Hadir</button>
+                        </form>
                         <div class="table-responsive">
                             <table class="table">
                                 <thead>

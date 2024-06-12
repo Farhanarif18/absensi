@@ -37,6 +37,9 @@
 				<li class="nav-item">
 					<a href="{{ route('dataCuti') }}" class="nav-link "><span class="pcoded-micon"><i class="feather icon-home"></i></span><span class="pcoded-mtext">Cuti</span></a>
 				</li>
+				<li class="nav-item">
+					<a href="{{ route('rekap') }}" class="nav-link "><span class="pcoded-micon"><i class="feather icon-home"></i></span><span class="pcoded-mtext">Rekap</span></a>
+				</li>
 				<li class="nav-item pcoded-menu-caption">
 
 			</ul>

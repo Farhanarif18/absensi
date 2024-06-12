@@ -33,7 +33,11 @@
                         <a href="{{ route('create') }}"><button class="btn btn-primary">Tambah Data</button></a>
                     </div>
                     <div class="card-body table-border-style">
+                        <form action="{{ route('export.user') }}">
+                            <button type="submit" class="btn btn-primary">Export Pegawai</button>
+                        </form>
                         <div class="table-responsive">
+                            
                             <table class="table">
                                 <thead>
                                     <tr>

@@ -31,6 +31,9 @@
                         <h5>KEHADIRAN</h5>
                         <span class="d-block m-t-5"> </span>
                     </div>
+                    <form action="{{ route('export.hadir') }}">
+                        <button type="submit" class="btn btn-primary">Export Kehadiran</button>
+                    </form>
                     <div class="card-body table-border-style">
                         <div class="table-responsive">
                             <table class="table">

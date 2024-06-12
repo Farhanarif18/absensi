@@ -151,4 +151,8 @@ class PegawaiController extends Controller
             ->get();
         return view('admin.cuti.index', compact('data','no'));
     }
+
+    public function rekap(){
+        return view('admin.rekap.index');
+    }
 }
