@@ -47,8 +47,8 @@ Route::get('/kehadiran', function () {
 Route::get('/cuti', 'App\Http\Controllers\PegawaiController@thadir')
     ->name('cuti');
 
-    Route::get('/rekap', 'App\Http\Controllers\PegawaiController@rekap')
-    ->name('rekap');
+    // Route::get('/rekap', 'App\Http\Controllers\PegawaiController@rekap')
+    // ->name('rekap');
 
 Route::get('/pegawai', 'App\Http\Controllers\PegawaiController@index')
     ->name('pegawai');

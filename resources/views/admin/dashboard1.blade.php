@@ -39,7 +39,7 @@
                             <div class="card-footer bg-c-yellow">
                                 <div class="row align-items-center">
                                     <div class="col-9"> 
-                                       
+                                    
                                     </div>
                                     <div class="col-3 text-right">
                                         <i class="feather icon-trending-up text-white f-16"></i>

@@ -62,7 +62,7 @@ class PegawaiController extends Controller
         // mengambil data pegawai berdasarkan id yang dipilih
         $pegawai = ModelsUser::where('id', $id)->get();
 
-        // passing data pegawai yang didapat ke view edit.blade.php
+        // passing data pegawai yang didapat ke view update.blade.php
         return view('admin.pegawai.update', compact('pegawai'));
     }
 
@@ -152,7 +152,7 @@ class PegawaiController extends Controller
         return view('admin.cuti.index', compact('data','no'));
     }
 
-    public function rekap(){
-        return view('admin.rekap.index');
-    }
+    // public function rekap(){
+    //     return view('admin.rekap.index');
+    // }
 }

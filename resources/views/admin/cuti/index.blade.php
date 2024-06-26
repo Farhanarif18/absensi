@@ -10,7 +10,6 @@
                 <div class="row align-items-center">
                     <div class="col-md-12">
                         <div class="page-header-title">
-                            <h5 class="m-b-10">Bootstrap Basic Tables</h5>
                         </div>
                         <ul class="breadcrumb">
                             <li class="breadcrumb-item"><a href="index.html"><i class="feather icon-home"></i></a></li>
@@ -28,8 +27,8 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
-                        <h5>Basic Table</h5>
-                        <span class="d-block m-t-5">use class <code>table</code> inside table element</span>
+                        <h5>Cuti Karyawan</h5>
+                        <span class="d-block m-t-5"> </span>
                             <form action="{{ route('export.cuti') }}">
                                 <button type="submit" class="btn btn-primary">Export Cuti</button>
                             </form>
