@@ -49,15 +49,15 @@
                                 <tbody>
                                     @foreach($pegawai as $p)
                                     <tr>
-                                        <td>{{ $no++ }}</td>
-                                        <td>{{ $p->user[0]->name }}</td>
+                                        <td>{{ $loop->iteration }}</td> <!-- Menggunakan $loop->iteration untuk penomoran otomatis -->
+                                        <td>{{ isset($p->user[0]) ? $p->user[0]->name : 'N/A' }}</td> <!-- Memeriksa apakah user[0] ada -->
                                         <td>{{ $p->jam_datang }}</td>
                                         <td>{{ $p->jam_pulang }}</td>
                                         <td>{{ $p->insentive }}</td>
-										<td></td>
+                                        <td></td>
                                     </tr>
+                                    @endforeach
                                 </tbody>
-                                @endforeach
                             </table>
                         </div>
                     </div>

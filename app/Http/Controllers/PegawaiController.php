@@ -25,7 +25,7 @@ class PegawaiController extends Controller
     {
 
         //mengambil data dari table user
-        $pegawai = ModelsUser::get();
+        $pegawai = ModelsUser::get();   
 
         // dd($pegawai);
 
@@ -49,7 +49,7 @@ class PegawaiController extends Controller
             'alamat' => $request->alamat,
             'no_hp' => $request->no_hp,
             'username' => $request->username,
-            'password' => bcrypt($request->password),
+            'password' => bcrypt($request->password),  
             'level' => 'user'
         ]);
         return redirect('/pegawai');

@@ -25,8 +25,8 @@ class ExcelExportController extends Controller
         return Excel::download(new HadirExport, 'Hadir.xlsx');
     }
     public function absen()
-{
+    {
     return Excel::download(new AbsenExport, 'Absen.xlsx');
-}
+    }
     
 }
